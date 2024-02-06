@@ -37,7 +37,7 @@ export default function SignIn() {
         return;
       }
       dispatch(signInSuccess(data));
-      navigate('/');
+      navigate('/search');
     } catch (error) {
       dispatch(signInFailure(error.message));
     }
@@ -62,10 +62,10 @@ export default function SignIn() {
         />
 
         <button
-          disabled={loading}
+         
           className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
         >
-          {loading ? 'Loading...' : 'Sign In'}
+          { 'Sign In'}
         </button>
         <OAuth/>
       </form>

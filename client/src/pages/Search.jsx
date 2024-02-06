@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ListingItem from '../components/ListingItem';
+import { Link } from 'react-router-dom';
+import Profile from './Profile';
 
 export default function Search() {
   const navigate = useNavigate();
@@ -228,6 +230,10 @@ export default function Search() {
             Search
           </button>
         </form>
+        <Link to={'/profile'} className='text-blue-700'>
+          Your profile
+        </Link>
+       
       </div>
       <div className='flex-1'>
         <h1 className='text-3xl font-semibold border-b p-3 text-slate-700 mt-5'>
